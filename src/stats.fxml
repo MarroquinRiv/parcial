@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="439.0" prefWidth="675.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Stats">
+   <children>
+      <TableView fx:id="myTableView" layoutX="59.0" layoutY="108.0" prefHeight="232.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="myTVChamba" prefWidth="75.0" text="Chamba" />
+          <TableColumn fx:id="myTVAmnsiendad" prefWidth="75.0" text="Amnsiendad" />
+            <TableColumn fx:id="myTVTemperature" prefWidth="89.0" text="Temperatura" />
+        </columns>
+      </TableView>
+      <TreeView fx:id="myTreeView" layoutX="380.0" layoutY="108.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="232.0" prefWidth="240.0">
+         <tooltip>
+            <Tooltip fx:id="myToolTip" text="Empty Tooltip" />
+         </tooltip>
+      </TreeView>
+      <DatePicker fx:id="myDatePicker" layoutX="52.0" layoutY="44.0" promptText="Fecha para registros" />
+      <Label fx:id="myDPLabel" layoutX="52.0" layoutY="69.0" prefHeight="19.0" prefWidth="60.0" />
+   </children>
+</AnchorPane>
